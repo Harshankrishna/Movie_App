@@ -7,7 +7,6 @@ import CustomPagination from "../../components/Pagination/CustomPagination";
 const Trending = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
-  // const API = "784c9906938a899599deb17196db400a";
 
   const fetchTrending = async () => {
     const { data } = await axios.get(
@@ -21,7 +20,6 @@ const Trending = () => {
   useEffect(() => {
     window.scroll(0, 0);
     fetchTrending();
-    // eslint-disable-next-line
   }, [page]);
 
   return (
